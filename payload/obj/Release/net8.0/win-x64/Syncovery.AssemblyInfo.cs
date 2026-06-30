@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Syncovery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73f8305f01f96ef8c540efe50dad2e1c56141063")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+269a876abb1e94218039d2fdeaecb2b34f030193")]
 [assembly: System.Reflection.AssemblyProductAttribute("Syncovery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Syncovery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

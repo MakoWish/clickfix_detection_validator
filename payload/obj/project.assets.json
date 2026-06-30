@@ -77,19 +77,19 @@
     ]
   },
   "packageFolders": {
-    "/home/ec10525/.nuget/packages/": {}
+    "/home/eadmin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ec10525/projects/clickfix_detection_validator/payload/Syncovery.csproj",
+      "projectUniqueName": "/home/eadmin/projects/clickfix_detecion_validator/payload/Syncovery.csproj",
       "projectName": "Syncovery",
-      "projectPath": "/home/ec10525/projects/clickfix_detection_validator/payload/Syncovery.csproj",
-      "packagesPath": "/home/ec10525/.nuget/packages/",
-      "outputPath": "/home/ec10525/projects/clickfix_detection_validator/payload/obj/",
+      "projectPath": "/home/eadmin/projects/clickfix_detecion_validator/payload/Syncovery.csproj",
+      "packagesPath": "/home/eadmin/.nuget/packages/",
+      "outputPath": "/home/eadmin/projects/clickfix_detecion_validator/payload/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ec10525/.nuget/NuGet/NuGet.Config"
+        "/home/eadmin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -133,7 +133,15 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[8.0.28, 8.0.28]"
+          },
+          {
             "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.28, 8.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
             "version": "[8.0.28, 8.0.28]"
           }
         ],
