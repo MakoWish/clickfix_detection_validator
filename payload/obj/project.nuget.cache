@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6wZLsuQJV5AcjAJHv504kRChhvplDTlwf/Jxl1Ox+xZO3kRpyeC6E8s6QbLBvJPXX+dX7f1fH44iTq8G3tF7Wg==",
+  "dgSpecHash": "+XTQbx+4dlnE8zbcB6nIh6ANiqVjMkg8cA0kQ8ed4K9IrH2DgEZ5pYcsvGO0gAYTYif01GKTg7wlXg0M8XsfLw==",
   "success": true,
-  "projectFilePath": "/home/ec10525/projects/clickfix_detection_validator/payload/Syncovery.csproj",
+  "projectFilePath": "/home/eadmin/projects/clickfix_detecion_validator/payload/Syncovery.csproj",
   "expectedPackageFiles": [
-    "/home/ec10525/.nuget/packages/microsoft.net.illink.tasks/8.0.28/microsoft.net.illink.tasks.8.0.28.nupkg.sha512",
-    "/home/ec10525/.nuget/packages/microsoft.netcore.app.host.win-x64/8.0.28/microsoft.netcore.app.host.win-x64.8.0.28.nupkg.sha512"
+    "/home/eadmin/.nuget/packages/microsoft.net.illink.tasks/8.0.28/microsoft.net.illink.tasks.8.0.28.nupkg.sha512",
+    "/home/eadmin/.nuget/packages/microsoft.netcore.app.runtime.win-x64/8.0.28/microsoft.netcore.app.runtime.win-x64.8.0.28.nupkg.sha512",
+    "/home/eadmin/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/8.0.28/microsoft.aspnetcore.app.runtime.win-x64.8.0.28.nupkg.sha512",
+    "/home/eadmin/.nuget/packages/microsoft.netcore.app.host.win-x64/8.0.28/microsoft.netcore.app.host.win-x64.8.0.28.nupkg.sha512"
   ],
   "logs": []
 }
