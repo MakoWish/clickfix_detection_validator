@@ -1,2 +1,0 @@
-/home/eadmin/projects/clickfix_detecion_validator/payload/out/Syncovery.pdb
-/home/eadmin/projects/clickfix_detecion_validator/payload/out/Syncovery.exe
