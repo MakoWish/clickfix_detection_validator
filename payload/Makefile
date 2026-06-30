@@ -1,12 +1,7 @@
 .PHONY: all clean
 
 all:
-	dotnet publish Syncovery.csproj \
-		-c Release \
-		-r win-x64 \
-		--self-contained true \
-		-p:PublishSingleFile=true \
-		-o out
+	x86_64-w64-mingw32-gcc syncovery_sim.c -Os -s -o Syncovery.exe -lshell32
 
 clean:
-	rm -rf bin obj out
+	rm -f Syncovery.exe
