@@ -2,7 +2,16 @@
 #include <stdio.h>
 
 int main(void) {
-    FILE *f = fopen("C:\\Windows\\Temp\\nexusconnector-validation.log", "a");
+    char temp[MAX_PATH];
+    char marker[MAX_PATH];
+
+    if (!GetEnvironmentVariableA("TEMP", temp, sizeof(temp))) {
+        return 1;
+    }
+
+    snprintf(marker, sizeof(marker), "%s\\nexusconnector-validation.log", temp);
+
+    FILE *f = fopen(marker, "a");
     if (!f) return 1;
 
     SYSTEMTIME st;
