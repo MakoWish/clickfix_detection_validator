@@ -4,7 +4,7 @@ These click-fix validations are a benign test of endpoint protection suites for 
 
 ## MSHTA
 
-This method leverages a pasted command that downloads an HTA that then leverages cURL to download an extract a "PDF" that is actually a TAR archive containing the payload. The payload is then executed. If a file `C:\Users\<username>\Documents\928252966059280400\clickfix-sim-payload.txt` is created, the "infection" succeeded.
+This method leverages a pasted command that downloads an HTA that then leverages cURL to download and extract a "PDF" that is actually a TAR archive containing the payload. The payload is then executed. If a file `C:\Users\<username>\Documents\928252966059280400\clickfix-sim-payload.txt` is created, the "infection" succeeded.
 
 ### Execution
 
@@ -27,7 +27,7 @@ Remove-Item -LiteralPath "$env:LOCALAPPDATA\B.max" -Force -ErrorAction SilentlyC
 
 ## PWSH
 
-This method leveraged a PowerShell chain loader to install an application to the user's profile, then an HKCU registry entry to start the application on login. 
+This method leverages a PowerShell chain loader to install an application to the user's profile, then an HKCU registry entry to start the application on login. 
 
 ### Execution
 
