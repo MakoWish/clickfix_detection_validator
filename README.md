@@ -1,4 +1,4 @@
-# ClickFix Infection Validation Tests
+# ClickFix Infection Simulations
 
 ## What is ClickFix?
 
