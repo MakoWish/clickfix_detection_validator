@@ -23,6 +23,8 @@ Key takeaway: ClickFix is not malware itself. It is a user-manipulation techniqu
 
 These **ClickFix** simulations are benign tests of Endpoint Protection suites. These two infection methods were observed in a production environment, so these tests were developed to help validate detection capabilities of various Endpoint Protection suites.
 
+_**NOTE**: See README files for each simulation for details on modifying the payloads._
+
 ### MSHTA Levaging cURL
 
 This method leverages a pasted command that downloads and executes a **Windows HTML Application** or **HTA**. The **HTA** then leverages `cURL` to download and extract a "PDF" file that is actually a TAR archive containing the payload. After extraction, the payload is then executed. 
