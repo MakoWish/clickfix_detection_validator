@@ -23,7 +23,7 @@ Key takeaway: ClickFix is not malware itself. It is a user-manipulation techniqu
 
 These **ClickFix** simulations are benign tests of Endpoint Protection suites. These two infection methods were observed in a production environment, so these tests were developed to help validate detection capabilities of various Endpoint Protection suites.
 
-_**NOTE**: See README files for each simulation for details on modifying the payloads._
+_**NOTE**: See README files within each simulation directory for details on modifying the payloads._
 
 ### MSHTA Levaging cURL
 
