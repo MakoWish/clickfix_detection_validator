@@ -2,7 +2,7 @@
 
 ## HTA Modification (REQUIRED!)
 
-Edit the `B.max` file and modify the `fakPdfUrl` value with the location of where you will be hosting the benign "PDF" payload archive and the `B.max` file itself.
+Edit the `B.max` file and modify the `fakePdfUrl` value with the location of where you will be hosting the benign "PDF" payload archive and the `B.max` file itself.
 
 _Example:_
 
