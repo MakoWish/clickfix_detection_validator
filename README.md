@@ -1,6 +1,27 @@
-# clickfix_detecion_validator
+# ClickFix Infection Validation Tests
 
-These click-fix validations are a benign test of endpoint protection suites for detection of two infection methods observed in a production environment. 
+## What is ClickFix?
+
+**ClickFix** is a social engineering malware-delivery technique where an attacker tricks a user into manually running a malicious command on their own device. Rather than exploiting a software vulnerability, the attacker displays a fake error message, CAPTCHA, browser issue, or verification prompt and instructs the user to copy, paste, and execute a command (commonly in PowerShell, Command Prompt, Terminal, or the Run dialog).
+
+Typical flow:
+
+* User visits a compromised or malicious website (or phishing page).
+* A fake error/CAPTCHA/support message appears.
+* The page tells the user to copy and run a command to "fix" the issue.
+* The command downloads and executes malware such as infostealers, RATs, or ransomware.
+
+Why it's effective:
+
+* The user performs the action themselves, helping bypass some automated security controls.
+* It uses legitimate tools already on the system (PowerShell, Terminal, etc.). These are commonly referred to as **Living off the Land Binaries** or **LOLBins**. 
+* The prompts often look like routine browser or security verification steps.
+
+Key takeaway: ClickFix is not malware itself. It is a user-manipulation technique used to get victims to execute malware on their own machines.
+
+## About These Tests
+
+These ClickFix validations are benign tests of Endpoint Protection suites. These two infection methods were observed in a production environment, so these tests were developed to validate detection capabilities of various Endpoint Protection suites. 
 
 ## MSHTA
 
