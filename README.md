@@ -1,5 +1,10 @@
 # ClickFix Infection Simulations
 
+[What is ClickFix](#what-is-clickfix)
+[The Simulations](#the-simulations)
+[Notes](#notes)
+[Disclaimer](#disclaimer)
+
 ## What is ClickFix?
 
 **ClickFix** is a social engineering malware-delivery technique where an attacker tricks a user into manually running a malicious command on their own device. Rather than exploiting a software vulnerability, the attacker displays a fake error message, CAPTCHA, browser issue, or verification prompt and instructs the user to copy, paste, and execute a command (commonly in **PowerShell**, **Command Prompt**, **Terminal**, or the **Run** dialog).
