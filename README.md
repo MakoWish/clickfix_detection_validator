@@ -125,11 +125,11 @@ Get-ChildItem -Path $env:TEMP -Directory -ErrorAction SilentlyContinue | ForEach
 
 ## Notes
 
-As of development of these simulations, Elastic Endpoint and Microsoft Defender were able to detect and prevent these simulated infections from ocurring. Two other endpoint protection suites (that I will not name here) failed to detect or prevent these infection methods. 
+As of development of these simulations, **Elastic Endpoint** and **Microsoft Defender** were able to detect and prevent these simulated infections from ocurring. Two other endpoint protection suites (that I will not name here) failed to detect or prevent these infection methods. 
 
 ## Disclaimer
 
-This repository is provided for educational, research, testing, and defensive security purposes only. The code contained herein is intended to simulate infection techniques observed in real-world environments to assist with security analysis, detection engineering, threat hunting, and incident response activities.
+This repository is provided for **_educational, research, testing, and defensive security purposes only_**! The code contained herein is intended to simulate infection techniques observed in real-world environments to assist with security analysis, detection engineering, threat hunting, and incident response activities.
 
 By accessing, downloading, or using any code in this repository, you acknowledge that you do so entirely at your own risk. The repository owner and contributors make no warranties, express or implied, regarding the safety, suitability, reliability, or fitness of the code for any purpose.
 
