@@ -2,7 +2,7 @@
 
 * [What is ClickFix](#what-is-clickfix)  
 * [The Simulations](#the-simulations)  
-  * [MSHTA Leveraging cURL](#mshta-leveraging-curl)  
+  * [MSHTA Leveraging cURL](#mshta-levaging-curl)  
   * [PWSH Chain Loader](#pwsh-chain-loader)  
 * [Notes](#notes)  
 * [Disclaimer](#disclaimer)  
