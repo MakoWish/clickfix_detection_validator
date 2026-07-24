@@ -1,9 +1,9 @@
 # ClickFix Infection Simulations
 
-[What is ClickFix](#what-is-clickfix)
-[The Simulations](#the-simulations)
-[Notes](#notes)
-[Disclaimer](#disclaimer)
+[What is ClickFix](#what-is-clickfix)  
+[The Simulations](#the-simulations)  
+[Notes](#notes)  
+[Disclaimer](#disclaimer)  
 
 ## What is ClickFix?
 
