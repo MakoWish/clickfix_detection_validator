@@ -27,7 +27,7 @@ _**NOTE**: See README files within each simulation directory for details on modi
 
 ### MSHTA Levaging cURL
 
-This method leverages a pasted command that downloads and executes a **Windows HTML Application** or **HTA**. The **HTA** then leverages `cURL` to download and extract a "PDF" file that is actually a TAR archive containing the payload. After extraction, the payload is then executed. 
+This method leverages a pasted command that downloads and executes a **Windows HTML Application** or **HTA**. The **HTA** then leverages `cURL` to download and extract a "PDF" file that is actually a TAR archive containing the payload. After extraction, the payload is then executed. The real-world infection contained a ransomware payload. This simulation simply writes a log file to test whether the "Ingress Tool Transfer via cURL" behavior can be detected.
 
 #### Execution
 
@@ -60,7 +60,7 @@ Remove-Item -LiteralPath "$env:LOCALAPPDATA\B.max" -Force -ErrorAction SilentlyC
 
 ### PWSH Chain Loader
 
-This method leverages a PowerShell chain loader to install an application to the user's profile, then an HKCU registry entry to start the application on login. Since the "run" command limits the number of characters that may be input, the actual command string is located in a text file `nexus-validation.txt` on the C2 server. These commands are then executed locally on the machine. 
+This method leverages a PowerShell chain loader to install an application to the user's profile, then an HKCU registry entry to start the application on login. Since the "run" command limits the number of characters that may be input, the actual command string is located in a text file `nexus-validation.txt` on the C2 server. These commands are then executed locally on the machine. The real-world infection contained a C2 client that installed added persistence via `HKCU` registry key to ensure the client starts on reboot. This simulation mimics the same behavior but only writes periodic lines to a log file to test whether the "Ingress Tool Transfer via PowerShell" behavior can be detected.
 
 #### Execution
 
@@ -122,6 +122,10 @@ Get-ChildItem -Path $env:TEMP -Directory -ErrorAction SilentlyContinue | ForEach
     }
 }
 ```
+
+## Notes
+
+As of development of these simulations, Elastic Endpoint and Microsoft Defender were able to detect and prevent these simulated infections from ocurring. Two other endpoint protection suites (that I will not name here) failed to detect or prevent these infection methods. 
 
 ## Disclaimer
 
